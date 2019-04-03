@@ -118,6 +118,7 @@
         style="@style/Base.AlertDialog.AppCompat.Light"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/bg_btn_result"
         />
 
     <TextView
