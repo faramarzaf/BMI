@@ -84,7 +84,7 @@
             android:layout_margin="@dimen/_2sdp"
             android:checked="true"
             android:text="Metric system"
-            android:textSize="@dimen/_17sdp"
+            android:textSize="@dimen/_16sdp"
 
             />
 
@@ -94,7 +94,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_2sdp"
             android:text="English system"
-            android:textSize="@dimen/_17sdp"
+            android:textSize="@dimen/_16sdp"
 
             />
 
@@ -117,7 +117,7 @@
         android:textSize="@dimen/_20sdp"
         style="@style/Base.AlertDialog.AppCompat.Light"
         android:layout_gravity="center"
-        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_25sdp"
         android:background="@drawable/bg_btn_result"
         />
 
@@ -129,7 +129,7 @@
         android:textSize="@dimen/_23sdp"
         android:textColor="#9C27B0"
         android:textStyle="bold"
-
+        android:layout_marginTop="@dimen/_30sdp"
         />
 
 
