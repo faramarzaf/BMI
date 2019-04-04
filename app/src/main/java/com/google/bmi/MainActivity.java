@@ -14,7 +14,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     EditText height, weight;
     Button btn_calc;
@@ -28,72 +28,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         bind();
-
-        btn_calc.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (v.getId() == btn_calc.getId()) {
-
-                    RadioGroup radio_group = findViewById(R.id.radio_group);
-                    int radioButtonID = radio_group.getCheckedRadioButtonId();
-                    RadioButton radioButton = radio_group.findViewById(radioButtonID);
-                    String selectedtext = (String) radioButton.getText();
-
-                    if (selectedtext.equals("Metric system")) {
-
-                        Float javab = bmiComputer.bmi_result_metric(Float.valueOf(height.getText().toString()), Float.valueOf(weight.getText().toString()));
-                        String javab2 = String.format("%.1f", javab);
-                        result.setText("BMI : " + String.valueOf(javab2));
-
-                        if (javab < 18.5) {
-                            explain.setText("You are underweight");
-                            explain.setTextColor(Color.rgb(129, 129, 129));
-
-                        } else if (javab > 18.5 && javab < 24.9) {
-                            explain.setText("You are normal");
-                            explain.setTextColor(Color.rgb(46, 194, 52));
-
-                        } else if (javab > 25 && javab < 29.9) {
-                            explain.setText("You are overweight");
-                            explain.setTextColor(Color.rgb(227, 177, 50));
-
-                        } else if (javab > 30) {
-                            explain.setText("You are obese");
-                            explain.setTextColor(Color.rgb(226, 27, 24));
-                        }
-
-
-                    } else if (selectedtext.equals("English system")) {
-
-                        Float javab = bmiComputer.bmi_result_english(Float.valueOf(height.getText().toString()), Float.valueOf(weight.getText().toString()));
-                        String javab2 = String.format("%.1f", javab);
-                        result.setText("BMI : " + String.valueOf(javab2));
-
-                        if (javab < 18.5) {
-                            explain.setText("You are underweight");
-                            explain.setTextColor(Color.rgb(129, 129, 129));
-
-                        } else if (javab > 18.5 && javab < 24.9) {
-                            explain.setText("You are normal");
-                            explain.setTextColor(Color.rgb(46, 194, 52));
-
-                        } else if (javab > 25 && javab < 29.9) {
-                            explain.setText("You are overweight");
-                            explain.setTextColor(Color.rgb(227, 177, 50));
-
-                        } else if (javab > 30) {
-                            explain.setText("You are obese");
-                            explain.setTextColor(Color.rgb(226, 27, 24));
-                        }
-
-                    }
-
-                }
-
-            }
-
-
-        });
+        btn_calc.setOnClickListener(this);
 
     }
 
@@ -125,4 +60,74 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onClick(View v) {
+
+        if (weight.length() == 0) {
+            weight.setError("Enter weight");
+        }
+
+        if (height.length() == 0) {
+            height.setError("Enter height");
+
+        } else if (weight.length() != 0 & height.length() != 0) {
+
+            RadioGroup radio_group = findViewById(R.id.radio_group);
+            int radioButtonID = radio_group.getCheckedRadioButtonId();
+            RadioButton radioButton = radio_group.findViewById(radioButtonID);
+            String selectedtext = (String) radioButton.getText();
+
+            if (selectedtext.equals("Metric system")) {
+
+                Float javab = bmiComputer.bmi_result_metric(Float.valueOf(height.getText().toString()), Float.valueOf(weight.getText().toString()));
+                String javab2 = String.format("%.1f", javab);
+                result.setText("BMI : " + String.valueOf(javab2));
+
+                if (javab < 18.5) {
+                    explain.setText("You are underweight");
+                    explain.setTextColor(Color.rgb(129, 129, 129));
+
+                } else if (javab > 18.5 && javab < 24.9) {
+                    explain.setText("You are normal");
+                    explain.setTextColor(Color.rgb(46, 194, 52));
+
+                } else if (javab > 25 && javab < 29.9) {
+                    explain.setText("You are overweight");
+                    explain.setTextColor(Color.rgb(227, 177, 50));
+
+                } else if (javab > 30) {
+                    explain.setText("You are obese");
+                    explain.setTextColor(Color.rgb(226, 27, 24));
+                }
+
+            } else if (selectedtext.equals("English system")) {
+
+                Float javab = bmiComputer.bmi_result_english(Float.valueOf(height.getText().toString()), Float.valueOf(weight.getText().toString()));
+                String javab2 = String.format("%.1f", javab);
+                result.setText("BMI : " + String.valueOf(javab2));
+
+                if (javab < 18.5) {
+                    explain.setText("You are underweight");
+                    explain.setTextColor(Color.rgb(129, 129, 129));
+
+                } else if (javab > 18.5 && javab < 24.9) {
+                    explain.setText("You are normal");
+                    explain.setTextColor(Color.rgb(46, 194, 52));
+
+                } else if (javab > 25 && javab < 29.9) {
+                    explain.setText("You are overweight");
+                    explain.setTextColor(Color.rgb(227, 177, 50));
+
+                } else if (javab > 30) {
+                    explain.setText("You are obese");
+                    explain.setTextColor(Color.rgb(226, 27, 24));
+                }
+
+            }
+
+        }
+
+    }
+
 }
+
