@@ -11,21 +11,23 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".MainActivity"
-            android:screenOrientation="portrait"
-            >
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".HelpActivity"
+            android:label="Help"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp_bmi.BMI_mvp_Activity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".HelpActivity"
-            android:label="Help"
-            android:screenOrientation="portrait"
-            />
-
+        <activity android:name=".mvp_bmi.Help_mvp_Activity"></activity>
     </application>
 
 </manifest>

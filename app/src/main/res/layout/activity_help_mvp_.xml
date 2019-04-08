@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/_9sdp"
+    tools:context=".HelpActivity"
+
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="What is English and metric system ?"
+        android:textColor="#000"
+        android:textSize="@dimen/_18sdp"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/_13sdp"
+        />
+
+    <View
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:background="@drawable/bg_view" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:text="Body mass index can be calculated using pounds and inches with this system.(English system)"
+        android:textColor="#000"
+        android:textSize="@dimen/_17sdp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:text="Body mass index can also be calculated using kilograms and centimeters with this system.\n(Metric system)"
+        android:textColor="#000"
+        android:textSize="@dimen/_17sdp" />
+
+    <View
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:background="@drawable/bg_view" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:gravity="center"
+        android:text="I am looking forward to receive any suggestion from you.\nContact us with our email."
+        android:textColor="#000"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/tv_gmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_1sdp"
+        android:text="tictac_dev@yahoo.com"
+        android:textColor="#9C27B0"
+        android:textIsSelectable="true"
+        android:textSize="@dimen/_12sdp"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:gravity="center"
+        android:text="tic-tac developments ©"
+        android:textColor="#000000"
+        android:textSize="@dimen/_10sdp"
+        android:textStyle="bold"
+
+        />
+
+
+    <ImageView
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:src="@drawable/ic_tictac"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_2sdp"
+        />
+
+</LinearLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/_10sdp"
+    tools:context=".MainActivity"
+
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/bmilogo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/_27sdp"
+            android:layout_height="@dimen/_27sdp"
+            android:layout_marginRight="@dimen/_3sdp"
+            android:src="@drawable/height" />
+
+        <EditText
+            android:id="@+id/height"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="wrap_content"
+            android:background="#00ffffff"
+            android:hint="Insert your height:"
+            android:inputType="number"
+            android:textColor="#000"
+            android:textSize="@dimen/_20sdp" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/_27sdp"
+            android:layout_height="@dimen/_27sdp"
+            android:layout_marginRight="@dimen/_3sdp"
+            android:src="@drawable/weight"
+            android:padding="@dimen/_1sdp"
+            />
+
+        <EditText
+            android:id="@+id/weight"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="wrap_content"
+            android:background="#00ffffff"
+            android:hint="Insert your weight:"
+            android:inputType="number"
+            android:textColor="#000"
+            android:textSize="@dimen/_20sdp" />
+
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:id="@+id/radio_group"
+        >
+
+        <RadioButton
+            android:id="@+id/btn_metric"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_2sdp"
+            android:checked="true"
+            android:text="Metric system"
+            android:textSize="@dimen/_16sdp"
+
+            />
+
+        <RadioButton
+            android:id="@+id/btn_english"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_2sdp"
+            android:text="English system"
+            android:textSize="@dimen/_16sdp"
+
+            />
+
+
+    </RadioGroup>
+
+
+    <View
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:background="@drawable/bg_view" />
+
+    <Button
+        android:layout_width="@dimen/_130sdp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_calc"
+        android:text="Get result"
+        android:textSize="@dimen/_20sdp"
+        style="@style/Base.AlertDialog.AppCompat.Light"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:background="@drawable/bg_btn_result"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/result_bmi"
+        android:gravity="center"
+        android:textSize="@dimen/_23sdp"
+        android:textColor="#9C27B0"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/_30sdp"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/explain"
+        android:gravity="center"
+        android:textSize="@dimen/_20sdp"
+        android:textStyle="bold"
+
+        />
+
+</LinearLayout>
